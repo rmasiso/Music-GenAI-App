@@ -75,6 +75,25 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
+Sometimes, using a python venv can be finnicky. So, you might want to do things manually. If the above methods don't work try doing the following:
+
+```
+pip install "torch=2.0"
+pip install wheel
+pip install xformers==0.0.22.ppost7
+pip install git+https://github.com/facebookresearch/audiocraft.git
+pip install ffmpeg-python~=0.2.0
+pip install ytube~=15.0.0
+```
+
+You will also need to install [brew](https://brew.sh/). Which you can do from the terminal like this:
+```/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"```
+
+And then, instsall ffmpeg:
+```brew install ffmpeg```
+
+
+
 ### Download Raw Data (optional)
 
 The repo already comes with a couple of royalty free input clips under `data/inputs`. But you can add more with the youtube script like this:
