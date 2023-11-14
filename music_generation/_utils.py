@@ -12,6 +12,8 @@ INPUT_DIR_PATH = os.path.join(os.path.dirname(__file__),\
 OUTPUT_DIR_PATH = os.path.join(os.path.dirname(__file__),\
                                      '../data/outputs/')
 
+#OUTPUT_DIR_PATH = '../data/outputs/'
+
 def download_audio_from_youtube(
         url:str
     ) -> str:
@@ -98,3 +100,18 @@ def read_audio_file(
     except Exception as err:
         # Handle other exceptions (e.g., file cannot be read)
         raise ValueError("Error reading the audio file") from err
+
+def generate_dirs(path):
+    if not os.path.exists(path):
+        try:
+            # Create the directory and its parent directories if they don't exist
+            os.makedirs(path)
+            print(f"Subfolders created at: {path}")
+        except OSError as e:
+            print(f"Error creating subfolders: {e}")
+    else:
+        print(f"Directory already exists: {path}")
+
+# generate dirs
+generate_dirs(INPUT_DIR_PATH); generate_dirs(OUTPUT_DIR_PATH);
+

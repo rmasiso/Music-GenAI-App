@@ -43,6 +43,7 @@ def generate(
     Example:
         output, waveform = generate("Piano", (44100, audio), 5, 0.8, 0.5, 60)
     """
+    global music_gen
     output = music_gen.generate(prompt_, input_audio_, True, top_k_, top_p_, temp_, duration_,\
                                 progress=progress_)
     if isinstance(output, str):
@@ -64,6 +65,7 @@ def load_model(model) -> str:
     Raises:
         gr.Error: If the model fails to load.
     """
+    global music_gen
     if music_gen is None:
         music_gen = MusicGenerator(model)
     if not music_gen.load_model(model):
@@ -78,6 +80,7 @@ def unload_model() -> str:
     Returns:
         str: An empty string indicating the successful unloading of the model.
     """
+    global music_gen
     if music_gen is not None:
         music_gen.delete_model()
     return ''
