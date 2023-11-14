@@ -87,7 +87,9 @@ pip install ytube~=15.0.0
 ```
 
 You will also need to install [brew](https://brew.sh/). Which you can do from the terminal like this:
-```/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"```
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
 
 And then, instsall ffmpeg:
 ```brew install ffmpeg```
