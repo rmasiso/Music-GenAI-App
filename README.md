@@ -75,7 +75,7 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-Sometimes, using a python venv can be finnicky. So, you might want to do things manually. If the above methods don't work try doing the following:
+Sometimes, using a python venv can be finnicky. So, you might want to do things manually. If the above methods don't work try doing the following within your virtual environment:
 
 ```
 pip install "torch=2.0"
