@@ -80,7 +80,7 @@ Sometimes, using a python venv can be finnicky. So, you might want to do things 
 ```
 pip install "torch=2.0"
 pip install wheel
-pip install xformers==0.0.22.ppost7
+pip install xformers==0.0.22.post7
 pip install git+https://github.com/facebookresearch/audiocraft.git
 pip install ffmpeg-python~=0.2.0
 pip install ytube~=15.0.0
