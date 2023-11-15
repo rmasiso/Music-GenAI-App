@@ -1,7 +1,6 @@
-#torch>=2.0
-#transformers>=4.31.0
+torch==2.0
+transformers>=4.31.0
 xformers==0.0.22.post7 #--no-use-pep517
-#git+https://github.com/facebookresearch/audiocraft.git
-git+https://git@github.com/facebookresearch/audiocraft#egg=audiocraft 
+git+https://github.com/facebookresearch/audiocraft.git
 ffmpeg-python~=0.2.0
 pytube~=15.0.0
